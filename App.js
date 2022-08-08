@@ -1,10 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
+import SocialButtons from './components/FBSocialButtons';
+
 
 export default function App() {
+  console.log({uri:'./assets/splash.png'});
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image
+      source=
+      {{uri:'./assets/splash.png'}}
+      />
+     <SocialButtons />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,7 +20,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
